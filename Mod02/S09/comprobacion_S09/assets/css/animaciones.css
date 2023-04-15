@@ -1,0 +1,11 @@
+div{
+    border: 1px solid black;
+}
+
+/* agrego un color para diferenciarlos */
+#text1{
+    background-color: blue;
+}
+#text2{
+    background-color: green;
+}

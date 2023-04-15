@@ -1,0 +1,40 @@
+1. Deberás crear un directorio y un archivo txt sin texto dentro de él.
+	mkdir comprobacion_M2_S12
+	touch comprobacion_M2_S12/arch_Mod2_S12.txt
+	
+2. Comienza a seguir aquel directorio para poder llevar un control de las versiones.
+	cd comprobacion_M2_S12
+	git init
+	
+3. Ve el estado de los archivos.
+	git status arch_Mod2_S12.txt
+	
+4. Comienza a seguir los archivos y realiza un commit.
+	git add arch_Mod2_S12.txt
+	git commit -m '1er commit'
+	
+5. Muestra el listado de commit.
+	git log
+	
+6. Realiza un cambio en el documento y muestra el estado del seguimiento del archivo .txt.
+	git status arch_Mod2_S12.txt
+	
+7. Muestra las diferencias entre el estado actual y el anterior.
+	git diff arch_Mod2_S12.txt
+
+8. Agrega los cambios y realiza un commit.
+	git add arch_Mod2_S12.txt
+	git commit -m '2do commit'
+	
+9. Muestra el listado de commit.
+	git log
+
+10. Realiza otro cambio, revisa las diferencias y restaura el estado anterior.
+	git diff arch_Mod2_S12.txt
+	git checkout arch_Mod2_S12.txt
+
+11. Muestra a través de la consola que información contiene el texto.
+	nano arch_Mod2_S12.txt
+
+12. Finalmente muestra un listado de los commit realizados.
+	git log

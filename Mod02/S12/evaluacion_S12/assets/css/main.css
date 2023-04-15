@@ -1,0 +1,48 @@
+.fondo-personalizado {
+    background-image: url("./../img/fondo.png");
+    background-repeat: repeat-x;
+    background-size: auto 25rem;
+}
+
+footer {
+    background-image: url("./../img/fondo.png");
+    height: 220px;
+    padding-top: 100px;
+}
+
+.nav-link {
+    text-shadow: 2px 1px #000;
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.destacados {
+    text-decoration: overline;
+}
+
+.card-img-top {
+    height: 220px;
+}
+
+.contenedor-formulario {
+    border-radius: 8px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+.fijar{
+    position: fixed;
+}

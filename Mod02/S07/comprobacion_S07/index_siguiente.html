@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mod2 S7</title>
+  <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <main>
+    <header></header>
+
+    <section id="idSectionM2S7" class="container-fluid">
+      <form method="POST" class="form needs-validation">
+        <!-- fila 1 -->
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4">
+            <label for="id1erNro">Primer Número</label>
+            <input id="id1erNro" type="number" name="id1erNro" class="form-control" required>
+          </div>
+        </div>
+        <!-- fila 2 -->
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4">
+            <label for="id2doNro">Segundo Número</label>
+            <input id="id2doNro" type="number" name="id2doNro" class="form-control" required>
+          </div>
+        </div>
+        <!-- fila 3 -->
+        <br>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4">
+            <!-- submit refresca la pagina -->
+            <button type="button" class="btn btn-primary col-12 col-sm-12 col-md-4" onclick="compararNros()">Comparar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="text/javascript" src="./assets/js/funciones.js"></script>
+</body>
+</html>
+
+<!-- 
+xs  <576px  - a 575
+sm  ≥576px  576 a 767
+md  ≥768px  768 a 991
+lg  ≥992px  992 a 1199
+xl  ≥1200px 1200 a 1399
+xxl ≥1400px 1400 a -
+-->

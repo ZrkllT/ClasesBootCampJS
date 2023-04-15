@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M2 S6</title>
+  <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+</head>
+<body>
+  <main>
+    <header><h3>comprobación M2 S6</h3></header>
+
+    <section id="idSectionM2S6" class="container-fluid">
+      <form method="GET" action="alertajumbo.html" target="_blank">
+        <!-- fila 1 -->
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4">
+            <label for="idNombre">Nombre</label>
+            <input id="idNombre" type="text" name="idNombre" class="form-control" value="DefNombre" required>
+          </div>
+          <div class="col-12 col-sm-12 col-md-4">
+            <label for="idApellido">Apellido</label>
+            <input id="idApellido" type="text" name="idApellido" class="form-control" value="DefApellido" required>
+          </div>
+          <div class="col-12 col-sm-12 col-md-4">
+            <label for="idUsuario">Nombre de Usuario</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="addonArroba">@</span>
+              <input id="idUsuario" type="text" name="idUsuario" class="form-control" placeholder="Ingres su Usuario" required>
+            </div>
+          </div>
+        </div>
+        <!-- fila 2 -->
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <label for="idCiudad">Ciudad</label>
+            <input id="idCiudad" type="text" name="idNombre" class="form-control" value="DefCiudad" required>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3">
+            <label for="idMotivo">Motivo</label>
+            <select id="idMotivo" class="form-select col-12 col-sm-12 col-md-3">
+              <option selected disabled>Deposito</option>
+              <option value="1">Giro</option>
+              <option value="2">Consulta de Saldo</option>
+            </select>
+          </div>
+        </div>
+        <!-- fila 3 -->
+        <div class="row">
+          <label for="idCheck">¿Desea ver la respuesta en pantalla?</label>
+          <div class="form-check col-2 col-sm-2 col-md-2">
+            <input id="idCheck" type="checkbox" name="idCheck" value="0">
+            <label class="form-check-label" for="idCheck">SI</label>
+          </div>
+        </div>
+        <!-- fila 4 -->
+        <div class="row">
+          <button type="submit" class="btn btn-primary col-2 col-sm-2 col-md-2 col-lg-1">Solicitar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!--
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Default checkbox
+  </label>
+</div>
+-->
+
+<!-- 
+xs  <576px  - a 575
+sm  ≥576px  576 a 767
+md  ≥768px  768 a 991
+lg  ≥992px  992 a 1199
+xl  ≥1200px 1200 a 1399
+xxl ≥1400px 1400 a -
+-->

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/img/n.png" type="image/x-icon"><title> NIMRODEL Restaurant y Pub</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- cargo css para que todas las imagenes se vean del mismo tamaño -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/images.css">
+
+</head>
+<body>
+  <center><a href="./index.html"><img src="../assets/img/n.png" class="logo"></a></center>
+  <h4>Reservas</h4>
+  <form method="POST" action="">
+    <table>
+      <thead>
+        <tr><th></th> </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <label for="RevNombre">Nombre </label> <input id="RevNombre" type="text" placeholder="Ingrese su Nombre" name="RevNombre" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="RevCorreo">Correo </label> <input id="RevCorreo" type="email" placeholder="Ingrese su Correo" name="RevCorreo" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="RevTelefono">Telefono </label> <input id="RevTelefono" type="number" placeholder="+56XXXXXXXXX" name="RevTelefono" pattern="^(\+?56)[9876543210]\d{8}$" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="RevFecha">Fecha </label> <input id="RevFecha" type="date" name="RevFecha" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="RevHora">Hora </label> <input id="RevHora" type="time" name="RevHora" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ReAsistentes">Cantidad de Asistentes </label> <input id="ReAsistentes" type="number" name="ReAsistentes" required>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <button type="submit">Enviar</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+
+  <footer>Todos los derechos reservados &reg</footer>
+</body>
+</html>
