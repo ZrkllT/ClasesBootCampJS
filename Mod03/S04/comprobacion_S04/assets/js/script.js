@@ -1,6 +1,7 @@
 
 function agregarOrigen(){
     $('#idSelOrigen').append(`
+      <option value=''>Seleccione</option>
       <option value='boston'>Boston, USA</option>
       <option value='chicago'>Chicago, USA</option>
       <option value='edmonton'>Edmonton, CA</option>
@@ -9,6 +10,7 @@ function agregarOrigen(){
 
 function agregarDestino(){
     $('#idSelDestino').append(`
+      <option value=''>Seleccione</option>
       <option value='paris'>Paris, FR</option>
       <option value='venecia'>Venecia, IT</option>
       <option value='seatle'>Seatle, USA</option>
@@ -16,8 +18,6 @@ function agregarDestino(){
 }
 
 function identificarEscala(ini, ter){
-    document.getElementById('idDetailOrigen').innerHTML = ini.toUpperCase()
-    document.getElementById('idDetailDestino').innerHTML = ter.toUpperCase()
     if((ini === 'chicago' && ter === 'venecia') || (ini === 'boston' && ter === 'paris')){
         return 1
     }else{
@@ -33,7 +33,7 @@ function informarEscala(escala){
     }
 }
 
-var valOrigen,valDestino, fechOrigen,fechDestino
+var valOrigen,valDestino,nameOrigen,nameDestino, fechOrigen,fechDestino, mostrarItinerario
 
 $(document).ready(function(){
     agregarOrigen()
@@ -43,12 +43,22 @@ $(document).ready(function(){
         valOrigen = $('#idSelOrigen').val()
         valDestino = $('#idSelDestino').val()
 
+        nameOrigen = $('option:selected','#idSelOrigen').text()
+        nameDestino = $('option:selected','#idSelDestino').text()
+
+        $('#idDetailOrigen').html(nameOrigen)
+        $('#idDetailDestino').html(nameDestino)
         informarEscala(identificarEscala(valOrigen,valDestino))
     })
     $(document).on('change','#idSelDestino',function(){
         valOrigen = $('#idSelOrigen').val()
         valDestino = $('#idSelDestino').val()
 
+        nameOrigen = $('option:selected','#idSelOrigen').text()
+        nameDestino = $('option:selected','#idSelDestino').text()
+
+        $('#idDetailOrigen').html(nameOrigen)
+        $('#idDetailDestino').html(nameDestino)
         informarEscala(identificarEscala(valOrigen,valDestino))
     })
     $(document).on('change','#idFechaOrigen',function(){
@@ -59,6 +69,16 @@ $(document).ready(function(){
         fechDestino = $('#idFechaDestino').val()
         document.getElementById('idDetalleFechaDestino').innerHTML = fechDestino
     })
+/*
+    mostrarItinerario = (valOrigen !== '' && valDestino !== '')
+    alert(mostrarItinerario)
+
+    if(mostrarItinerario){
+        $('#contenedor-itinerario').removeClass('d-none')
+    }else{
+        $('#contenedor-itinerario').addClass('d-none')
+    }
+*/
 })
 
 /*
@@ -68,4 +88,11 @@ Chicago, USA > Venecia, IT.
 /*
 idDetalleFechaOrigen
 idDetalleFechaDestino
+*/
+/*
+var destino = $('option:selected', "#destino").text()
+$("#opcion-destino").html(destino)
+*//*
+document.getElementById('idDetailOrigen').innerHTML = ini.toUpperCase()
+document.getElementById('idDetailDestino').innerHTML = ter.toUpperCase()
 */
