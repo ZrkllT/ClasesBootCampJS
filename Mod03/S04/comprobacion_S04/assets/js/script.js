@@ -33,6 +33,14 @@ function informarEscala(escala){
     }
 }
 
+function mostrarItinerario(ini,ter,dti,dtt){
+    if(ini === '' || ter === ''){
+        $('#contenedor-itinerario').addClass('d-none')
+    }else{
+        $('#contenedor-itinerario').removeClass('d-none')
+    }
+}
+
 var valOrigen,valDestino,nameOrigen,nameDestino, fechOrigen,fechDestino, mostrarItinerario
 
 $(document).ready(function(){
@@ -42,6 +50,8 @@ $(document).ready(function(){
     $(document).on('change','#idSelOrigen',function(){
         valOrigen = $('#idSelOrigen').val()
         valDestino = $('#idSelDestino').val()
+
+        mostrarItinerario(valOrigen,valDestino)
 
         nameOrigen = $('option:selected','#idSelOrigen').text()
         nameDestino = $('option:selected','#idSelDestino').text()
@@ -53,6 +63,8 @@ $(document).ready(function(){
     $(document).on('change','#idSelDestino',function(){
         valOrigen = $('#idSelOrigen').val()
         valDestino = $('#idSelDestino').val()
+
+        mostrarItinerario(valOrigen,valDestino)
 
         nameOrigen = $('option:selected','#idSelOrigen').text()
         nameDestino = $('option:selected','#idSelDestino').text()

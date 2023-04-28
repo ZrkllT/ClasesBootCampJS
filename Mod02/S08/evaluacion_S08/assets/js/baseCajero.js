@@ -1,3 +1,4 @@
+/* mod 02 S08 */
 /* creo el objeto */
 function cuentaBancaria(nombre,id,clave,saldo){
     this.nombre = nombre
