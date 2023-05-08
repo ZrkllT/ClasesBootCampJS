@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practica S06</title>
+  <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+  <main>
+    <header><h1>Practica Colores</h1></header>
+    <section class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <label for="idColorName">Ingrese un Color (ingles)</label>
+          <input id="idColorName" type="text" class="form-control">
+        </div>
+        <div class="col-12 col-md-4">
+          <button id="idAddButton" onclick="addColor()" type="button" class="btn btn-primary mt-4">Agregar</button>
+        </div>
+        <div class="col-12 mt-3">
+          <table id="tableColor" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Color</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
