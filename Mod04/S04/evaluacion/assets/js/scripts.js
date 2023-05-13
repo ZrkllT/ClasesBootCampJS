@@ -46,6 +46,16 @@ function dibujarFinalizadas(){
     }
 }
 
+function eliminarTerminada(id){
+    listTareaSelected.delete(id)
+
+    var idCheckTreminados = '#check'+id
+    $(idCheckTreminados).closest('li').removeClass('tachado')
+    $(idCheckTreminados).prop('checked', false)
+
+    dibujarFinalizadas()
+}
+
 $(document).ready(function(){
     dibujarLista()
 
@@ -58,11 +68,11 @@ $(document).ready(function(){
 
         if(select){
             listTareaSelected.add(key)
-            //$(this).closest('li').addClass('tachado')
-            $(idLi).addClass('tachado')
+            $(this).closest('li').addClass('tachado')
+            //$(idLi).addClass('tachado')
         }else{
             listTareaSelected.delete(key)
-            $(this).closest('li').removeClas('tachado')
+            $(this).closest('li').removeClass('tachado')
         }
         dibujarFinalizadas()
     })
