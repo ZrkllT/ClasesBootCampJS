@@ -29,7 +29,8 @@ function dibujarLista(){
 
 function dibujarFinalizadas(){
     if(listTareaSelected.size > 0){
-        $('#list-finalizadas').parent().parent().parent().removeClass('d-none')
+        //$('#list-finalizadas').parent().parent().parent().removeClass('d-none')
+        $('#list-finalizadas').parent().removeClass('d-none')
         $('#list-finalizadas').html('<li class="list-group-item list-group-item-secondary">Tareas Finalizadas</li>')
         for(const key of listTareaSelected){
             var terminada = listTareasMap.get(key).descripcion
@@ -42,7 +43,8 @@ function dibujarFinalizadas(){
                 `)
         }
     }else{
-        $('#list-finalizadas').parent().parent().parent().addClass('d-none')
+        //$('#list-finalizadas').parent().parent().parent().addClass('d-none')
+        $('#list-finalizadas').parent().addClass('d-none')
     }
 }
 
