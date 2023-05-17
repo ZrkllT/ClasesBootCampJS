@@ -15,8 +15,10 @@ function listaColores(){
 }
 
 function eliminarFila(iad){
-    listElectro.splice(iad,1)
-    dibujarElectro()
+    if(confirm('¿Esta seguro que desea eliminar el Electrodomestico?')){
+        listElectro.splice(iad,1)
+        dibujarElectro()
+    }
 }
 
 function agregarElectro(){
@@ -49,6 +51,7 @@ function agregarElectro(){
 
 function dibujarElectro(){
     $('#tableElectro tbody').html('')
+    $('#spTotalRegistros').text(listElectro.length)
     listElectro.forEach((electro,index) =>{
         $('#tableElectro tbody').append(`
             <tr id="${index}">
@@ -68,6 +71,7 @@ $(document).ready(function(){
         $('#msg-nombre').addClass('d-none')
         $('#inNombre').css({"border" : "1px solid #c8c8c8"})
         if(k.keyCode === 13){ /*enter*/
+            //agregarElectro()
         }
     })
 
