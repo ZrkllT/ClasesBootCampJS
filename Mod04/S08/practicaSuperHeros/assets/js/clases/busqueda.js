@@ -12,7 +12,12 @@ async function buscarHero(name){
     //respuesta.then((data) => console.log('opcion 1',data))
 
     /* opcion 2 para esparar la peticion */
-    var respuesta2 = await peticiones(urlBusqueda)
+    try{
+        var respuesta2 = await peticiones(urlBusqueda)
+    }catch(error){
+        alert('error en la busqueda')
+        return
+    }
     console.log(respuesta2)
 
     if(respuesta2.response == 'error'){

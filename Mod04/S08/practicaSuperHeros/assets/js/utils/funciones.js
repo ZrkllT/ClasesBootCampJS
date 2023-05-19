@@ -1,13 +1,28 @@
 
-
 const peticiones = (url) =>{
     return new Promise((resolve, reject) =>{
         fetch(url)
             .then((hero) => hero.json())
             .then((heroData) => resolve(heroData))
-            .catch((err) => console.log(err))
+            .catch((error) => reject(error))
     })
 
 }
 
-export default { peticiones }
+const peticionAjax = (url) =>{
+    return new Promise((resolve, reject) =>{
+        $.ajax({
+            url: url,
+            type: 'GET',
+            data: {},
+            success: function(data){
+                resolve(data);
+            },
+            error: function(error){
+                reject(error)
+            }
+        })
+    })
+}
+
+export default { peticiones, peticionAjax }
