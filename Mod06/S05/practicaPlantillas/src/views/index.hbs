@@ -1,0 +1,40 @@
+{{> header }}
+
+{{#if mostrarFotos }}
+  <div class="row col-3 container">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/venusaur-mega.png" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/gastrodon.png" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/scrafty.png" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/zapdos.png" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/heatran.png" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://play.pokemonshowdown.com/sprites/gen5/tapulele.png" class="d-block" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+{{ else }}
+    <div class="alert alert-info">Las fotos no están disponibles en este momento</div>
+{{/if}}
+
+{{> footer }}

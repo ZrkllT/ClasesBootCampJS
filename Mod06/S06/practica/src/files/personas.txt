@@ -1,0 +1,1 @@
+[{"id":"cb544573","rut":"16059458-6","nombre":"Alvaro","apellido":"Cerda"},{"id":"5eb23d39","rut":"15187395-2","nombre":"Andrea","apellido":"Cerda"},{"id":"43caedda","rut":"16059458-6","nombre":"Alvaro","apellido":"Cerda"},{"id":"9a23ee6f","rut":"16059458-6","nombre":"Alvaro","apellido":"Cerda"}]
